@@ -4,7 +4,7 @@ from lab4api import *
 # demo for mcdonald's
 start_meal("McDonald's", "Welcome to McDonald's")
 
-myMenu = get_menu("msmba-restaurant/menu.csv","Our Menu")
+myMenu = get_menu("menu.csv","Our Menu")
 show_menu(myMenu)
 
 myOrder = create_order("John", 5)
