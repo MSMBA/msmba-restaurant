@@ -27,20 +27,20 @@ class Bill:
         return self.getSubTotal() + self.getTax()
     
     def show(self):
-        print "\n##########"
-        print "Bill calculated at " + time.strftime("%a, %d %b %Y %H:%M", time.localtime())
-        print "Goods and Services: "
+        print("\n##########")
+        print("Bill calculated at " + time.strftime("%a, %d %b %Y %H:%M", time.localtime()))
+        print("Goods and Services: ")
         for order in self.getOrders():
-            print "-----"
+            print("-----")
             order.showForBill()
-        print "========="
+        print("=========")
         subtotal = self.getSubTotal()
         tax = self.getTax()
         total = self.getTotal()
-        print ("%-60s" % "Pre-tax:")  + "$" + str(round(subtotal,2))    
-        print ("%-60s" % "Tax:")   + "$" + str(round(tax,2))           
-        print ("%-60s" % "Total:")  + "$" + str(round(total,2))    
-        print "##########\n"
+        print(("%-60s" % "Pre-tax:")  + "$" + str(round(subtotal,2)))    
+        print(("%-60s" % "Tax:")   + "$" + str(round(tax,2)))           
+        print(("%-60s" % "Total:")  + "$" + str(round(total,2)))    
+        print("##########\n")
     
     def merge(self,bill):
         # According to test data available online the fastest method to merge two lists

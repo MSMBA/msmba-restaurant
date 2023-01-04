@@ -6,11 +6,11 @@ class menu:
     
 # Displays all menu items in a user friendly way        
     def show(self):
-        print "   " + self.title
-        print "   " + "-" * len(self.title)
+        print("   " + self.title)
+        print("   " + "-" * len(self.title))
         i = 1
         for item in self.items:
-            print ("%-2s" % str(i)) + " " + ("%-40s" % item.getName()) + " $" + str(item.getPrice())
+            print(("%-2s" % str(i)) + " " + ("%-40s" % item.getName()) + " $" + str(item.getPrice()))
             i = i + 1
 
 # Returns the title    
