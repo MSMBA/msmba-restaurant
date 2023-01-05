@@ -57,7 +57,7 @@ def end_meal(restaurant_name, message):
 
 # this function creates a menu object from a csv file
 def get_menu(file, title="Menu"):
-    csvfile = open(file, "rU")
+    csvfile = open(file, "r")
     dialect = csv.Sniffer().sniff(csvfile.read(1024))
     csvfile.seek(0)
     menuReader = csv.reader(csvfile, dialect)
